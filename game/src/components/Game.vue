@@ -1,13 +1,16 @@
 <template>
     <div>
-        <h1>Rock Paper Scissors</h1>
-        <h1>{{resultGame}}</h1>
+        <h1 id="title">Rock Paper Scissors</h1>
         <h2>Your Score: {{playerGained}}</h2>
         <h2>Computer's Score: {{computersGained}}</h2>
-        <button @click="rock">Rock</button>
-        <button @click="paper">Paper</button>
-        <button @click="scissors">Scissors</button>
-        <button @click="reset">Reset Scores</button>
+        <div id="buttons">
+            <button class="button-os" @click="rock">Rock</button>
+            <button class="button-os" @click="paper">Paper</button>
+            <button class="button-os" @click="scissors">Scissors</button>
+            <button class="button-os" @click="reset">Reset Scores</button>
+        </div>
+        
+        <h1 id="result">{{resultGame}}</h1>
     </div>
 </template>
 
@@ -91,4 +94,23 @@ export default {
 
 <style scoped>
     
+    #buttons{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    button{
+        border: solid 1px greenyellow;
+        border-radius: 15px;
+        box-shadow: 0 0 8px rgb(207, 207, 207);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        padding: 3%;
+        margin: 3%;
+    }
+   
+   
+  
 </style>
