@@ -23,6 +23,9 @@ export default {
             resultGame: '',
             computersGained: 0,
             playerGained: 0,
+
+
+            
         }
     },
 
